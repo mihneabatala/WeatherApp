@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App by Mihnea Batala</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preload" as="image" href="https://source.unsplash.com/random/1920x1080/?cityname" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="search-box">
+            <input type="text" maxlength="30" id="search" placeholder="Enter city">
+            <button onclick="searchCity()" class="search-button"><img src="Images/icon-search.svg" alt=""></button>
+        </div>
+        
+        <h1 class="weather-city">Weather in Bucharest</h1>
+
+        <div class="main-info">
+            <div class="degrees-info">
+                <h2 class="degrees">30°</h2>
+                <div class="img-info"><img src="" alt="" class="icon"></div>
+            </div>
+            <div class="other-info">
+                <p class="day-info p-info" >Partly Cloudy</p>
+                <p class="city-name p-info">Bucharest</p>
+                <p class="max-min-feels-like p-info">33°/16° Feels like 29°</p>
+            </div>
+            
+        </div>
+
+        <div class="group-info">
+            <div class="humidity">
+                <img src="Images/icons-humidity.png" alt="humidity" class="img-size">
+                <p class="humidity-text">Humidity</p>
+                <p class="h-percent p-margin">35%</p>
+            </div>
+
+            <div class="cloudiness">
+                <img src="Images/icons-cloud.png" alt="clouds" class="img-size">
+                <p class="cloud-text">Clouds</p>
+                <p class="c-percent p-margin">50%</p>
+            </div>
+
+            <div class="wind">
+                <img src="Images/icons-wind.png" alt="wind" class="img-size">
+                <p class="wind-text">Wind</p>
+                <p class="w-percent p-margin">3 km/h</p>
+            </div>
+
+            <div class="sunrise-sunset">
+                <div class="sunrise">
+                    <img src="Images/icons-sunrise.png" alt="sunrise" class="img-size">
+                    <p class="sunrise-text">Sunrise</p>
+                    <p class="sunrise-data p-margin">7:00</p>
+                </div>
+
+                <div class="sunset">
+                    <img src="Images/icons-sunset.png" alt="sunset" class="img-size">
+                    <p class="sunset-text">Sunset</p>
+                    <p class="sunset-data p-margin">19:15</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

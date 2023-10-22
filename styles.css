@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat&family=Nanum+Gothic&display=swap');
+
+*,::after,::before{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    font-size: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+body{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url(https://source.unsplash.com/random/1600×900/?Iasi);
+    object-fit: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    height: auto;
+    background-color: black;
+    opacity: 90%;
+    border-radius: 3rem;
+    position: fixed;
+}
+
+.search-box{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.search-box #search{
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    width: 30rem;
+    background-color: rgb(70, 69, 69);
+    text-indent: 1rem;
+    font-size: 1.8rem;
+    color: white;
+}
+.search-button{
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    align-self: center;
+    border: none;
+    background-color: rgb(70, 69, 69);
+    cursor: pointer;
+    margin: 0.5rem;
+    text-align: center;
+}
+.search-button:active{
+    transform: translateY(1px);
+}
+.weather-city{
+    margin-top: 4rem;
+    font-size: 4.5rem;
+}
+.main-info{
+    margin:3rem 2rem 0 4rem;
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.degrees-info{
+    display: flex;
+}
+
+.img-info{
+    width: 6.4rem;
+    height: 6.4rem;
+    margin-left: 0.5rem;
+}
+.icon{
+    width: 8rem;
+    
+}
+
+.city-name{
+    margin-top: 1rem;
+    font-size: 1.8rem;
+}
+.max-min-feels-like{
+    font-size: 1.8rem;
+}
+.group-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 10rem;
+    font-size: 1.5rem;
+    margin-top: 8rem;
+}
+
+.sunrise-sunset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    text-align: center;
+    font-weight: 600;
+    
+}
+.p-info{
+    font-weight: 500;
+}
+.p-margin{
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.img-size{
+    width: 7rem;
+    height: 7rem;
+}
+.day-info{
+    font-weight: 600;
+}
+.degrees-info{
+    margin-top: 1rem;
+}
+.sunrise{
+    margin-right: 1rem;
+}
+.humidity,.cloudiness,.wind{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Phone (Portrait) */
+
+@media (max-width: 480px) { 
+    html{
+        font-size: 6.5px;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        
+    }
+    .group-info{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 4rem;
+        margin: 3rem 0;
+    }
+    .weather-city{
+        margin:4rem 0 0 4rem;
+    }
+}
+
+/* Mobile Phones (Landscape) */
+
+@media (min-width: 481px) and (max-width: 767px) { 
+    html{
+        font-size: 8px;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        
+    }
+    .group-info{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 4rem;
+        margin: 3rem 0;
+    }
+    .weather-city{
+        margin:4rem 0 0 8rem;
+    }
+}
+
+/* Tablet (Portrait) */
+
+@media (min-width: 768px) and (max-width: 1024px) { 
+    html{
+        font-size: 9px;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        
+    }
+    .group-info{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 4rem;
+        margin: 3rem 0;
+    }
+    .weather-city{
+        margin:4rem 0 0 8rem;
+    }
+}
+
+/* Tablets (Landscape) */
+
+@media (min-width: 1025px) { 
+    html{
+        font-size: 9px;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        
+    }
+    .group-info{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 4rem;
+        margin: 3rem 0;
+    }
+    .weather-city{
+        margin-left: 14rem;
+    }
+}
+
+/* Small Desktops and Laptops */
+
+@media (min-width: 1025px) and (max-width: 1440px) { 
+    html{
+        font-size: 9px;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        
+    }
+    .group-info{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 4rem;
+        margin: 4rem 4rem;
+    }
+    .weather-city{
+        margin-left: 14rem;
+    }
+}
+
+/* Large Desktops */
+
+@media (min-width: 1441px) { 
+    html{
+        font-size: 11px;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+    
+    }
+    .group-info{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 4rem;
+        margin: 4rem 4rem;
+    }
+    .weather-city{
+    text-align: center;
+    margin: 0;
+    margin-top: 4rem;
+    }
+}
