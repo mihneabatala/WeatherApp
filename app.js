@@ -1,4 +1,4 @@
-const APIKEY = '9b468a9bdd96048504aeb9f5f5ab4eb5';
+const APIKEY='';
 const weatherCity = document.querySelector('.weather-city');
 const inputText = document.querySelector('#search');
 const mainDegrees = document.querySelector('.degrees');
