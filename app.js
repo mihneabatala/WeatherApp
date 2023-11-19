@@ -32,16 +32,25 @@ function fetchWeather(city){
             alert(error.message);
         })
 }
-
-function displayWeather(data){
-    const {name} = data;
+function changeWeather(name) {
+    
     const backgroundImageUrl = "https://source.unsplash.com/random/1920x1080/?" + name;
 
-    const preloadImage = new Image();
-    preloadImage.src = backgroundImageUrl;
-    preloadImage.onload = function () {
-        document.body.style.background = `url('${backgroundImageUrl}')`;
-    }
+    return new Promise((resolve, reject) =>{
+        const img = new Image();
+        img.src = backgroundImageUrl;
+        img.onload = () =>{
+            document.body.style.backgroundImage = `url('${backgroundImageUrl}')`;
+            resolve();
+        }
+    });
+    
+}
+
+async function displayWeather(data){
+    const {name} = data;
+
+    await changeWeather(name);
 
     const {icon, description} = data.weather[0];
     const {temp, temp_min, temp_max, feels_like, humidity} = data.main;
@@ -113,7 +122,7 @@ function showCurrentWeather(position) {
     + APIKEY)
         .then((response) => {
             if(!response.ok){
-                throw new Error('Cant get location !');
+                throw new Error("Can't get location!");
             }
             return response.json();
         })
